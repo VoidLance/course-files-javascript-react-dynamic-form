@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# Dynamic Form
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A small React application that demonstrates a controlled, stateful form. Enter a value, see it update live with its current length, and submit it to a list of previously submitted values.
 
-## Available Scripts
+## Why use this project?
 
-In the project directory, you can run:
+This project is a focused example for learning or demonstrating:
 
-### `npm start`
+- Controlled React inputs with `useState`
+- Live input previews and character counting
+- Basic validation and user feedback
+- Maintaining and rendering a collection of submitted values
+- Resetting individual pieces of component state
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Submitted values must contain between 3 and 20 characters. Empty or out-of-range values are rejected.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js and npm
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Clone the repository, enter the project directory, and install dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone https://github.com/VoidLance/course-files-javascript-react-dynamic-form.git
+cd course-files-javascript-react-dynamic-form
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Run the application
 
-### `npm run eject`
+Start the development server:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Open [http://localhost:3000](http://localhost:3000) in a browser. Type a value such as `Hello`, then select **Submit** to add it to the submitted values list.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The controls work as follows:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Submit** validates and records the current input.
+- **Reset** clears the current input.
+- **Reset Output** clears all submitted values.
 
-## Learn More
+## Available scripts
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Run these commands from the project directory:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+| Command | Purpose |
+| --- | --- |
+| `npm start` | Start the development server with live reload. |
+| `npm test` | Run the test suite in watch mode. |
+| `npm run build` | Create an optimized production build in `build/`. |
+| `npm run eject` | Eject from Create React App configuration. This is irreversible. |
 
-### Code Splitting
+## Project structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```text
+src/
+├── App.js          # Application shell
+├── DynamicForm.js  # Form state, validation, and rendering
+├── App.css         # Application layout styles
+└── App.test.js     # Component tests
+public/             # Static assets and application metadata
+```
 
-### Analyzing the Bundle Size
+## Help and documentation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+For questions or problems, [open an issue](https://github.com/VoidLance/course-files-javascript-react-dynamic-form/issues) with reproduction steps and relevant console output. You can also consult the official documentation:
 
-### Making a Progressive Web App
+- [React documentation](https://react.dev/)
+- [Create React App documentation](https://create-react-app.dev/docs/getting-started/)
+- [Testing Library documentation](https://testing-library.com/docs/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Maintainer and contributions
 
-### Advanced Configuration
+This project is maintained by [VoidLance](https://github.com/VoidLance).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Contributions are welcome. Before opening a pull request:
 
-### Deployment
+1. Create a focused branch for your change.
+2. Make the smallest change that addresses the issue.
+3. Run `npm test` and `npm run build`.
+4. Describe the change and test results in the pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For larger changes, open an issue first to discuss the proposed approach.
